@@ -39,7 +39,7 @@ func NewProject(name string) {
 
 	files := []string{
 		"readme.md",
-		"Makfile",
+		"Makefile",
 	}
 	for _, filename := range files {
 		file, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE, 0644)
