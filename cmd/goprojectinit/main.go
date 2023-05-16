@@ -35,6 +35,7 @@ func NewProject(name string) {
 	}
 	for _, dir := range dirs {
 		os.Mkdir(dir, 0755)
+		fmt.Println("create new dir " + dir)
 	}
 
 	files := []string{
@@ -47,6 +48,7 @@ func NewProject(name string) {
 			fmt.Printf("Error creating %s file\n", filename)
 		}
 		defer file.Close()
+		fmt.Println("create new file " + filename)
 	}
 
 }
